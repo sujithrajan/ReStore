@@ -33,6 +33,9 @@ axios.interceptors.response.use(
       case 401:
         toast.error(data.title);
         break;
+      case 404:
+        toast.error(data.title);
+        break;
       case 500:
         history.push("/server-error", { error: data });
         break;
